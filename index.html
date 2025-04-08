@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trading Signal Pro</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  
+  
+</head>
+<body>
+  <div class="modal" id="custom-modal">
+    <div class="modal-content">
+      Вы выбрали: <span id="modal-value">EURUSD</span>
+    </div>
+  </div>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+        <img src="https://api.dicebear.com/7.x/icons/svg?seed=tradepro" alt="Logo">
+        <h1>Trade Signal</h1>
+      </div>
+      <div class="settings">
+        <div class="input-group">
+            <label data-i18n="instrument">Инструмент</label>
+          <div class="custom-select-wrapper">
+            <div class="custom-select" data-id="currency">
+              <div class="custom-select-trigger">EURUSD</div>
+              <div class="custom-options">
+                <span class="custom-option selected">EURUSD</span>
+                <span class="custom-option">BTCUSD</span>
+                <span class="custom-option">XAUUSD</span>
+                <span class="custom-option">ETHUSD</span>
+                <span class="custom-option">USDRUB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="input-group">
+            <label data-i18n="time">Время</label>
+          <div class="custom-select-wrapper">
+            <div class="custom-select" data-id="timeframe">
+              <div class="custom-select-trigger">1 минута</div>
+              <div class="custom-options">
+                <span class="custom-option selected" data-value="60">1 минута</span>
+                <span class="custom-option" data-value="180">3 минуты</span>
+                <span class="custom-option" data-value="300">5 минут</span>              
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="input-group">
+        <label data-i18n="language">Язык</label>
+  <div class="custom-select-wrapper">
+    <div class="custom-select" id="language-select">
+      <div class="custom-select-trigger">Русский</div>
+      <div class="custom-options">
+        <span class="custom-option selected" data-lang="ru">
+            <img class="flag" src="https://flagcdn.com/w20/ru.png" alt="RU"> Русский
+          </span>
+          <span class="custom-option" data-lang="en">
+            <img class="flag" src="https://flagcdn.com/w20/gb.png" alt="EN"> English
+          </span>
+          <span class="custom-option" data-lang="uz">
+            <img class="flag" src="https://flagcdn.com/w20/uz.png" alt="UZ"> O'zbekcha
+          </span>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+        <button id="generate-btn">ПОЛУЧИТЬ СИГНАЛ</button>
+      </div>
+      
+    </div>
+    
+    <div class="main-content">
+        <div class="signal-block">
+          <div class="signal-header">
+            <h2>
+              <img src="/images/sig.png" alt="Signal Icon" class="signal-icon">
+              <span data-i18n="signal">Сигнал</span>
+            </h2>
+            <span id="signal-time"></span>
+          </div>
+          <div id="signal-result" class="signal-result">
+            <div class="signal-placeholder" data-i18n="placeholder">Нажмите "Получить сигнал"</div>
+          </div>
+        </div>
+      
+        <div class="chart-block">
+          <div class="chart-header">
+            <h2 class="chart-title">
+              <img src="/images/graf.png" alt="Chart Icon" class="chart-icon">
+              <span data-i18n="technical-analysis">Технический анализ</span>
+            </h2>
+          </div>
+          <div id="chart" class="chart"></div>
+        </div>
+      </div>
+      
+  </div> 
+</body>
+<script src="script.js"></script>
+
+</html>
